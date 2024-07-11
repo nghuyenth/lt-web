@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quản lý khóa học</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            max-width: 500px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], textarea, select, input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .edit-btn, .delete-btn {
+            padding: 2px 5px;
+            margin-right: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .edit-btn:hover, .delete-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quản lý khóa học</h1>
+
+    <form id="courseForm">
+        <h2>Thông tin khóa học</h2>
+        <input type="text" id="courseName" name="courseName" placeholder="Tên khóa học" required>
+        <input type="text" id="courseTime" name="courseTime" placeholder="Thời gian học" required>
+        <textarea id="courseIntro" name="courseIntro" placeholder="Giới thiệu" required></textarea>
+        <textarea id="courseContent" name="courseContent" placeholder="Nội dung" required></textarea>
+        <input type="number" id="courseFee" name="courseFee" placeholder="Học phí" required>
+        <input type="number" id="studentCount" name="studentCount" placeholder="Số sinh viên" required>
+        <input type="number" id="subjectCount" name="subjectCount" placeholder="Số lượng môn" required>
+        <input type="file" id="courseImage" name="courseImage" accept="image/*" required>
+        <input type="text" id="courseTypeId" name="courseTypeId" placeholder="Loại khóa học ID" required>
+        <button type="submit">Thêm</button>
+        <button type="button" onclick="clearForm()">Xóa trường nhập liệu</button>
+    </form>
+
+    <table id="courseTable">
+        <tr>
+            <th>Tên khóa học</th>
+            <th>Thời gian học</th>
+            <th>Giới thiệu</th>
+            <th>Nội dung</th>
+            <th>Học phí</th>
+            <th>Số sinh viên</th>
+            <th>Số lượng môn</th>
+            <th>Hình ảnh</th>
+            <th>Loại khóa học ID</th>
+            <th>Chức năng</th>
+        </tr>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#courseTime").datepicker({
+                dateFormat: "yy-mm-dd"
+            });
+        });
+
+        const courseForm = document.getElementById("courseForm");
+        const courseTable = document.getElementById("courseTable");
+        let selectedRow = null;
+
+        courseForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const courseName = document.getElementById("courseName").value;
+            const courseTime = document.getElementById("courseTime").value;
+            const courseIntro = document.getElementById("courseIntro").value;
+            const courseContent = document.getElementById("courseContent").value;
+            const courseFee = document.getElementById("courseFee").value;
+            const studentCount = document.getElementById("studentCount").value;
+            const subjectCount = document.getElementById("subjectCount").value;
+            const courseImage = document.getElementById("courseImage").value;
+            const courseTypeId = document.getElementById("courseTypeId").value;
+
+            if (selectedRow) {
+                // Edit existing row
+                selectedRow.cells[0].innerHTML = courseName;
+                selectedRow.cells[1].innerHTML = courseTime;
+                selectedRow.cells[2].innerHTML = courseIntro;
+                selectedRow.cells[3].innerHTML = courseContent;
+                selectedRow.cells[4].innerHTML = courseFee;
+                selectedRow.cells[5].innerHTML = studentCount;
+                selectedRow.cells[6].innerHTML = subjectCount;
+                selectedRow.cells[7].innerHTML = courseImage;
+                selectedRow.cells[8].innerHTML = courseTypeId;
+            } else {
+                // Add new row
+                const newRow = courseTable.insertRow();
+                const cell1 = newRow.insertCell(0);
+                const cell2 = newRow.insertCell(1);
+                const cell3 = newRow.insertCell(2);
+                const cell4 = newRow.insertCell(3);
+                const cell5 = newRow.insertCell(4);
+                const cell6 = newRow.insertCell(5);
+                const cell7 = newRow.insertCell(6);
+                const cell8 = newRow.insertCell(7);
+                const cell9 = newRow.insertCell(8);
+                const cell10 = newRow.insertCell(9);
+
+                cell1.innerHTML = courseName;
+                cell2.innerHTML = courseTime;
+                cell3.innerHTML = courseIntro;
+                cell4.innerHTML = courseContent;
+                cell5.innerHTML = courseFee;
+                cell6.innerHTML = studentCount;
+                cell7.innerHTML = subjectCount;
+                cell8.innerHTML = courseImage;
+                cell9.innerHTML = courseTypeId;
+                cell10.innerHTML = "<button class='edit-btn' onclick='editRow(this)'>Sửa</button><button class='delete-btn' onclick='deleteRow(this)'>Xóa</button>";
+            }
+
+            clearForm();
+        });
+
+        function editRow(btn) {
+            selectedRow = btn.parentNode.parentNode;
+            document.getElementById("courseName").value = selectedRow.cells[0].innerHTML;
+            document.getElementById("courseTime").value = selectedRow.cells[1].innerHTML;
+            document.getElementById("courseIntro").value = selectedRow.cells[2].innerHTML;
+            document.getElementById("courseContent").value = selectedRow.cells[3].innerHTML;
+            document.getElementById("courseFee").value = selectedRow.cells[4].innerHTML;
+            document.getElementById("studentCount").value = selectedRow.cells[5].innerHTML;
+            document.getElementById("subjectCount").value = selectedRow.cells[6].innerHTML;
+            document.getElementById("courseImage").value = selectedRow.cells[7].innerHTML;
+            document.getElementById("courseTypeId").value = selectedRow.cells[8].innerHTML;
+        }
+
+        function deleteRow(btn) {
+            const row = btn.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+
+        function clearForm() {
+            courseForm.reset();
+            selectedRow = null;
+        }
+    </script>
+</body>
+</html>

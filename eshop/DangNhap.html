@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eshop</title>
+    <style>
+        .dangky-dangnhap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .modal-body input[type="text"],
+        .modal-body input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #cccccc;
+        }
+
+        .creat-admin {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login_button {
+            padding: 10px 20px;
+            background-color: #ffa200;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dangky" class="dangky-dangnhap">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Đăng nhập</h4>
+            </div>
+            <div class="modal-body">
+                <form id="form_login" action="" method="post">
+                    <input id="login_id_home" name="email_log" placeholder="Tên đăng nhập" type="text">
+                    <input id="password_home" placeholder="Mật khẩu" type="password" name="password_log">
+                    <div class="creat-admin"> 
+                        <input type="submit" name="login" class="btn btn-default login_button" value="Đăng nhập"><span> Bạn chưa có tài khoản? <a href="DangKy.html">Đăng ký</a> ngay</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/axios.min.js"></script>
+    <script>
+        // const axios = require('axios');
+
+        // Dữ liệu đăng nhập
+        const userData = {
+            tennguoidung: 'ten_nguoi_dung',
+            matkhau: 'mat_khau'
+        };
+
+        axios.post('https://localhost:7146/api/TaiKhoan/DangNhap', userData)
+        .then(function (response) {
+            // Xử lý khi đăng nhập thành công
+            console.log(response);
+        })
+        .catch(function (error) {
+            // Xử lý khi xảy ra lỗi
+            console.log(error);
+        })
+        .finally(function () {
+            // Luôn luôn được thực thi
+        });
+    </script>
+</body>
+</html>

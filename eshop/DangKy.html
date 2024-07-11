@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eshop</title>
+    <style>
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .dangky-dangnhap {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .modal-body input[type="text"],
+        .modal-body input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .creat-admin {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .creat-admin input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #ffa200;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .creat-admin a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main" class="wrapper">
+        <div id="dangky" class="dangky-dangnhap">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Đăng ký</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="form_login" action="" method="post">
+                        <input type="text" name="fullname" placeholder="Họ tên">
+                        <input type="text" name="phone" placeholder="Số điện thoại">
+                        <input type="text" name="email" placeholder="Email">
+                        <input type="password" name="password" placeholder="Mật khẩu">
+                        <input type="password" name="re_password" placeholder="Nhập lại mật khẩu">
+                        <div class="creat-admin">
+                            <input type="submit" value="Tạo tài khoản" name="login"> <span> Bạn đã có tài khoản? <a href="DangNhap.html">Đăng nhập</a> ngay</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

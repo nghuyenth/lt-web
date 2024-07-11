@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<!-- Meta Tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name='copyright' content=''>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Title Tag  -->
+    <title>Eshop</title>
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<!-- Web Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+	
+	<!-- StyleSheet -->
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/magnific-popup.min.css">
+	<!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+	<!-- Fancybox -->
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<!-- Themify Icons -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Nice Select CSS -->
+    <link rel="stylesheet" href="css/niceselect.css">
+	<!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+	<!-- Flex Slider CSS -->
+    <link rel="stylesheet" href="css/flex-slider.min.css">
+	<!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl-carousel.css">
+	<!-- Slicknav -->
+    <link rel="stylesheet" href="css/slicknav.min.css">
+	
+	<!-- Eshop StyleSheet -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            max-width: 500px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="date"], input[type="tel"], input[type="email"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #ffa200;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffa200;
+        }
+
+        .edit-btn, .delete-btn {
+            padding: 2px 5px;
+            margin-right: 5px;
+            background-color: #ffa200;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .edit-btn:hover, .delete-btn:hover {
+            background-color: #ffa200;
+        }
+    </style>
+
+	
+</head>
+<body class="js">
+	
+	<!-- Preloader -->
+	<div class="preloader">
+		<div class="preloader-inner">
+			<div class="preloader-icon">
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+	<!-- End Preloader -->
+		
+		<!-- Header -->
+		<header class="header shop">
+			<!-- Topbar -->
+			<div class="topbar">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-md-12 col-12">
+							<!-- Top Left -->
+							<div class="top-left">
+								<ul class="list-main">
+									<li><i class="ti-headphone-alt"></i>0987.654.321</li>
+									<li><i class="ti-email"></i> utt@support.com</li>
+								</ul>
+							</div>
+							<!--/ End Top Left -->
+						</div>
+						<div class="col-lg-8 col-md-12 col-12">
+							<!-- Top Right -->
+							<div class="right-content">
+								<ul class="list-main">
+									<li><i class="ti-location-pin"></i>Địa chỉ</li>
+									<li><i class="ti-alarm-clock"></i> <a href="#">Giờ làm việc</a></li>
+									<li><i class="ti-user"></i> <a href="#">Thông tin</a></li>
+									<li><i class="ti-power-off"></i><a href="DangNhap.html">Đăng nhập</a></li>
+								</ul>
+							</div>
+							<!-- End Top Right -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Topbar -->
+			<div class="middle-inner">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2 col-md-2 col-12">
+							<!-- Logo -->
+							<div class="logo">
+								<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+							</div>
+							<!--/ End Logo -->
+							<!-- Search Form -->
+							<div class="search-top">
+								<div class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
+								<!-- Search Form -->
+								<div class="search-top">
+									<form class="search-form">
+										<input type="text" placeholder="Search here..." name="search">
+										<button value="search" type="submit"><i class="ti-search"></i></button>
+									</form>
+								</div>
+								<!--/ End Search Form -->
+							</div>
+							<!--/ End Search Form -->
+							<div class="mobile-nav"></div>
+						</div>
+						<div class="col-lg-8 col-md-7 col-12">
+							<div class="search-bar-top">
+								<div class="search-bar">
+									<select>
+										<option selected="selected">Danh mục</option>
+										<option>C#</option>
+										<option>HTML</option>
+										<option>JAVA</option>
+									</select>
+									<form>
+										<input name="search" placeholder="Search Products Here....." type="search">
+										<button class="btnn"><i class="ti-search"></i></button>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-3 col-12">
+							<div class="right-bar">
+								<!-- Search Form -->
+								<div class="sinlge-bar">
+									<a href="#" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Header Inner -->
+			<div class="header-inner">
+				<div class="container">
+					<div class="cat-nav-head">
+						<div class="row">
+							<div class="col-12">
+								<div class="menu-area">
+                                    <nav class="navbar navbar-expand-lg">
+                                        <div class="navbar-collapse">	
+                                            <div class="nav-inner">	
+                                                <ul class="nav main-menu menu navbar-nav">
+                                                    <li><a href="TrangChu.html">Trang chủ</a></li>
+                                                    <li  class="active"><a href="#">Khóa học<i class="ti-angle-down"></i></a>
+                                                        <ul class="dropdown">
+                                                            <li><a href="KhoaHoc.html">Khóa Học</a></li>
+                                                            <li><a href="HocVien.html">Học Viên</a></li>
+                                                            <li><a href="DangKyHoc.html">Đăng Ký Học</a></li>
+                                                            <!-- <li><a href="TinhTrangHoc.html">Tình Trạng</a></li> -->
+                                                            <li><a href="LoaiKhoaHoc.html">Loại Khóa Học</a></li>
+                                                        </ul>
+                                                    </li>								
+                                                    <li><a href="#">Bài Viết<i class="ti-angle-down"></i><span class="new">New</span></a>
+                                                        <ul class="dropdown">
+                                                            <li><a href="BaiViet.html">Bài Viết</a></li>
+                                                            <li><a href="ChuDe.html">Chủ Đề</a></li>
+                                                            <li><a href="LoaiBaiViet.html">Loại Bài Viết</a></li>
+                                                        </ul>
+                                                    </li>								
+                                                    <!-- <li><a href="#">Tài Khoản</a>
+                                                        <ul class="dropdown">
+                                                            <li><a href="TaiKhoan.html">Tài Khoản</a></li>
+                                                            <li><a href="QuyenHan.html">Quyền Hạn</a></li>
+                                                        </ul>
+                                                    </li> -->
+													<li><a href="LienHe.html">Liên Hệ</a></li>		
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Inner -->
+		</header>
+		<!--/ End Header -->
+	
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+            <form id="studentForm">
+                <h2>Thông tin học viên</h2>
+                <input type="file" id="image" name="image" accept="image/*" required>
+                <input type="text" id="fullName" name="fullName" placeholder="Họ và tên" required>
+                <input type="date" id="dob" name="dob" placeholder="Ngày sinh" required>
+                <input type="tel" id="phone" name="phone" placeholder="Số điện thoại" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="text" id="province" name="province" placeholder="Tỉnh/Thành phố" required>
+                <input type="text" id="district" name="district" placeholder="Quận/Huyện" required>
+                <input type="text" id="ward" name="ward" placeholder="Phường/Xã" required>
+                <input type="text" id="address" name="address" placeholder="Số nhà" required>
+                <button type="submit" onclick="themHocVien()">Thêm</button>
+                <button type="button" onclick="clearForm()">Xóa trường nhập liệu</button>
+            </form>
+        
+            <table id="studentTable">
+				<thead>
+					<tr>
+						<th>Hình ảnh</th>
+						<th>Họ và tên</th>
+						<th>Ngày sinh</th>
+						<th>Số điện thoại</th>
+						<th>Email</th>
+						<th>Tỉnh/Thành phố</th>
+						<th>Quận/Huyện</th>
+						<th>Phường/Xã</th>
+						<th>Số nhà</th>
+						<th>Chức năng</th>
+					</tr>
+				</thead>
+				<tbody id="studentTableBody">
+					<!-- Dữ liệu bài viết sẽ được thêm vào đây -->
+				</tbody>
+            </table>
+        
+			<script src="js/beareToken.js"></script>
+			<script src="js/fillData.js"></script>
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+				  fillData_HocVien();
+				});
+			</script>
+
+			<script>
+				function themHocVien() {
+					// Lấy thông tin từ các trường nhập liệu
+					const image = document.getElementById("image").value;
+                    const fullName = document.getElementById("fullName").value;
+                    const dob = document.getElementById("dob").value;
+                    const phone = document.getElementById("phone").value;
+                    const email = document.getElementById("email").value;
+                    const province = document.getElementById("province").value;
+                    const district = document.getElementById("district").value;
+                    const ward = document.getElementById("ward").value;
+                    const address = document.getElementById("address").value;
+					
+					const apiUrl = 'https://localhost:7146/api/HocVien/ThemHocVien';
+					const requestData = {
+						// Dữ liệu yêu cầu được gửi lên API
+						image: image,
+						fullName: fullName,
+						dob: dob,
+						phone: phone,
+						email: email,
+						province: province,
+						district: district,
+						ward: ward,
+						address: address
+					};
+
+					const xhr = new XMLHttpRequest();
+					xhr.open('POST', apiUrl, true);
+					xhr.setRequestHeader('Content-Type', 'application/json');
+					xhr.setRequestHeader('Authorization', authToken);
+
+					xhr.onreadystatechange = function () {
+						if (xhr.readyState === XMLHttpRequest.DONE) {
+							if (xhr.status === 200) {
+								// Xử lý phản hồi từ API
+								console.log(xhr.responseText);
+								alert('Thêm thành công');
+							} else {
+								// Xử lý lỗi nếu có
+								console.error(xhr.status);
+								alert('Thêm thất bại');
+							}
+						}
+					};
+
+					xhr.send(JSON.stringify(requestData));
+				}
+			</script>
+
+            <script>
+                const studentForm = document.getElementById("studentForm");
+                const studentTable = document.getElementById("studentTable");
+                let selectedRow = null;
+        
+                studentForm.addEventListener("submit", function(e) {
+                    e.preventDefault();
+        
+                    const image = document.getElementById("image").value;
+                    const fullName = document.getElementById("fullName").value;
+                    const dob = document.getElementById("dob").value;
+                    const phone = document.getElementById("phone").value;
+                    const email = document.getElementById("email").value;
+                    const province = document.getElementById("province").value;
+                    const district = document.getElementById("district").value;
+                    const ward = document.getElementById("ward").value;
+                    const address = document.getElementById("address").value;
+        
+                    if (selectedRow) {
+                        // Sửa thông tin học viên
+                        selectedRow.cells[0].innerText = image;
+                        selectedRow.cells[1].innerText = fullName;
+                        selectedRow.cells[2].innerText = dob;
+                        selectedRow.cells[3].innerText = phone;
+                        selectedRow.cells[4].innerText = email;
+                        selectedRow.cells[5].innerText = province;
+                        selectedRow.cells[6].innerText = district;
+                        selectedRow.cells[7].innerText= ward;
+                        selectedRow.cells[8].innerText = address;
+                    } else {
+                        // Thêm thông tin học viên
+                        const newRow = studentTable.insertRow();
+        
+                        const imageCell = newRow.insertCell(0);
+                        imageCell.innerText = image;
+        
+                        const fullNameCell = newRow.insertCell(1);
+                        fullNameCell.innerText = fullName;
+        
+                        const dobCell = newRow.insertCell(2);
+                        dobCell.innerText = dob;
+        
+                        const phoneCell = newRow.insertCell(3);
+                        phoneCell.innerText = phone;
+        
+                        const emailCell = newRow.insertCell(4);
+                        emailCell.innerText = email;
+        
+                        const provinceCell = newRow.insertCell(5);
+                        provinceCell.innerText = province;
+        
+                        const districtCell = newRow.insertCell(6);
+                        districtCell.innerText = district;
+        
+                        const wardCell = newRow.insertCell(7);
+                        wardCell.innerText = ward;
+        
+                        const addressCell = newRow.insertCell(8);
+                        addressCell.innerText = address;
+        
+                        const actionCell = newRow.insertCell(9);
+                        const editButton = document.createElement("button");
+                        editButton.innerHTML = "Sửa";
+                        editButton.className = "edit-btn";
+                        editButton.addEventListener("click", function() {
+                            editRow(newRow);
+                        });
+                        actionCell.appendChild(editButton);
+        
+                        const deleteButton = document.createElement("button");
+                        deleteButton.innerHTML = "Xóa";
+                        deleteButton.className = "delete-btn";
+                        deleteButton.addEventListener("click", function() {
+                            deleteRow(newRow);
+                        });
+                        actionCell.appendChild(deleteButton);
+                    }
+        
+                    clearForm();
+                });
+        
+                function editRow(row) {
+                    selectedRow = row;
+                    document.getElementById("image").value = row.cells[0].innerText;
+                    document.getElementById("fullName").value = row.cells[1].innerText;
+                    document.getElementById("dob").value = row.cells[2].innerText;
+                    document.getElementById("phone").value = row.cells[3].innerText;
+                    document.getElementById("email").value = row.cells[4].innerText;
+                    document.getElementById("province").value = row.cells[5].innerText;
+                    document.getElementById("district").value = row.cells[6].innerText;
+                    document.getElementById("ward").value = row.cells[7].innerText;
+                    document.getElementById("address").value = row.cells[8].innerText;
+                }
+        
+                function deleteRow(row) {
+                    if (confirm("Bạn có chắc chắn muốn xóa học viên này?")) {
+                        
+						// Lấy thông tin từ các trường nhập liệu
+						var email = document.getElementById('email').value;
+						const apiUrl = 'https://localhost:7146/api/HocVien/XoaHocVien';
+						const requestData = new URLSearchParams();
+						requestData.append('email', email);
+
+						const xhr = new XMLHttpRequest();
+						xhr.open('DELETE', apiUrl + '?' + requestData.toString(), true);
+						xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+						xhr.setRequestHeader('Authorization', authToken);
+
+						xhr.onreadystatechange = function () {
+							if (xhr.readyState === XMLHttpRequest.DONE) {
+								if (xhr.status === 200) {
+									// Xử lý phản hồi từ API
+									console.log(xhr.responseText);
+									alert('Xóa thành công');
+								} else {
+									// Xử lý lỗi nếu có
+									console.error(xhr.status);
+									alert('Xóa thất bại');
+								}
+							}
+						};
+						xhr.send(JSON.stringify(requestData));
+						// Đặt lại giá trị của trường nhập liệu
+						document.getElementById("title").value = "";
+						
+						studentTable.deleteRow(row.rowIndex);
+                        clearForm();
+                    }
+                }
+        
+                function clearForm() {
+                    selectedRow = null;
+                    document.getElementById("image").value = "";
+                    document.getElementById("fullName").value = "";
+                    document.getElementById("dob").value = "";
+                    document.getElementById("phone").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("province").value = "";
+                    document.getElementById("district").value = "";
+                    document.getElementById("ward").value = "";
+                    document.getElementById("address").value = "";
+                }
+            </script>
+
+		</div>
+	</div>
+	<!-- End Breadcrumbs -->
+		<!-- Start Footer Area -->
+		<footer class="footer">
+			<!-- Footer Top -->
+			<div class="footer-top section">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-5 col-md-6 col-12">
+							<!-- Single Widget -->
+							<div class="single-footer about">
+								<div class="logo">
+									<a href="index.html"><img src="images/logo2.png" alt="#"></a>
+								</div>
+								<p class="call">Liên hệ<span><a href="tel:123456789">0987.654.321</a></span></p>
+							</div>
+							<!-- End Single Widget -->
+						</div>
+						<div class="col-lg-2 col-md-6 col-12">
+							<!-- Single Widget -->
+							<div class="single-footer links">
+								<h4>Thông tin</h4>
+								<ul>
+									<li><a href="#">Về chúng tôi</a></li>
+									<li><a href="#">Câu hỏi thường gặp</a></li>
+									<li><a href="#">Điều khoản và liên hệ</a></li>
+									<li><a href="LienHe.html">Liên hệ</a></li>
+									<li><a href="LienHe.html">Giúp đỡ</a></li>
+								</ul>
+							</div>
+							<!-- End Single Widget -->
+						</div>
+						<div class="col-lg-2 col-md-6 col-12">
+							<!-- Single Widget -->
+							<div class="single-footer links">
+								<h4>Chăm sóc khách hàng</h4>
+								<ul>
+									<li><a href="#">Phương thức thanh toán</a></li>
+									<li><a href="#">Hoàn tiền</a></li>
+									<li><a href="#">Chính sách bảo mật</a></li>
+								</ul>
+							</div>
+							<!-- End Single Widget -->
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<!-- Single Widget -->
+							<div class="single-footer social">
+								<h4>Liên lạc</h4>
+								<!-- Single Widget -->
+								<div class="contact">
+									<ul>
+										<li>54 Triều Khúc, Thanh Xuân, Hà Nội</li>
+										<li>info@eshop.com</li>
+										<li>0987.654.321</li>
+									</ul>
+								</div>
+								<!-- End Single Widget -->
+								<ul>
+									<li><a href="#"><i class="ti-facebook"></i></a></li>
+									<li><a href="#"><i class="ti-twitter"></i></a></li>
+									<li><a href="#"><i class="ti-flickr"></i></a></li>
+									<li><a href="#"><i class="ti-instagram"></i></a></li>
+								</ul>
+							</div>
+							<!-- End Single Widget -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Footer Top -->
+			<div class="copyright">
+				<div class="container">
+					<div class="inner">
+						<div class="row">
+							<div class="col-lg-6 col-12">
+								<div class="left">
+									<p>Copyright © 2024 -  All Rights Reserved.</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-12">
+								<div class="right">
+									<img src="images/payments.png" alt="#">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- /End Footer Area -->
+		
+		<!-- Jquery -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-migrate-3.0.0.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<!-- Popper JS -->
+		<script src="js/popper.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Color JS -->
+		<script src="js/colors.js"></script>
+		<!-- Slicknav JS -->
+		<script src="js/slicknav.min.js"></script>
+		<!-- Owl Carousel JS -->
+		<script src="js/owl-carousel.js"></script>
+		<!-- Magnific Popup JS -->
+		<script src="js/magnific-popup.js"></script>
+		<!-- Fancybox JS -->
+		<script src="js/facnybox.min.js"></script>
+		<!-- Waypoints JS -->
+		<script src="js/waypoints.min.js"></script>
+		<!-- Countdown JS -->
+		<script src="js/finalcountdown.min.js"></script>
+		<!-- Nice Select JS -->
+		<script src="js/nicesellect.js"></script>
+		<!-- Ytplayer JS -->
+		<script src="js/ytplayer.min.js"></script>
+		<!-- Flex Slider JS -->
+		<script src="js/flex-slider.js"></script>
+		<!-- ScrollUp JS -->
+		<script src="js/scrollup.js"></script>
+		<!-- Onepage Nav JS -->
+		<script src="js/onepage-nav.min.js"></script>
+		<!-- Easing JS -->
+		<script src="js/easing.js"></script>
+		<!-- Active JS -->
+		<script src="js/active.js"></script>
+	</body>
+	</html>
